@@ -128,7 +128,6 @@ Eureka Discovery service)
 
 
 ## 9. Sécuriser votre système avec un système de d’authentification OAuth2 comme Keycloak
-![realmsetting](https://github.com/SanaeBelfrouh/Projet-Syst-mes-Distribu-s/assets/116807307/3e2a5958-a682-4915-a726-9e53740f70fb)
 ![keykloacksever](https://github.com/SanaeBelfrouh/Contr-le-et-Projet-Programmation-Distribu-e/assets/116807307/36fcdf26-e9db-42e1-a2c9-eb2a62bae353)
 
 [demokey.webm](https://github.com/SanaeBelfrouh/Contr-le-et-Projet-Programmation-Distribu-e/assets/116807307/5bcec818-edcc-42d6-9011-094eb8baa069)
