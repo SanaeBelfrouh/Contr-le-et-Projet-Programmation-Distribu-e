@@ -11,7 +11,7 @@ Ce projet est un système distribué basé sur les micro-services, conçu pour g
     - [Service Infractions](#service-infractions)
     - [Service Eureka Discovery](#service-eureka-discovery)
     - [Service Gateway](#service-gateway)
-    - [grpc Radar](#grpc-radar)
+    - [Radar service application ](#radar-service-app)
 - [Frontend avec Angular](#frontend-avec-angular)
 
 ## Architecture technique
@@ -112,3 +112,11 @@ Le micro-service Radar gère les radars et génère de nouvelles infractions lor
 ![radar-h2](https://github.com/SanaeBelfrouh/Projet-Syst-mes-Distribu-s/assets/116807307/2e75cae4-757d-4cfc-a5fa-7155de8e20ac)
 
 [radars-web.webm](https://github.com/SanaeBelfrouh/Projet-Syst-mes-Distribu-s/assets/116807307/e48cc6d2-e1b5-48e2-99a4-7ed06b978337)
+## 7. Mettre en place les services techniques de l’architecture micro-service (Gateway,
+Eureka Discovery service)
+![eureka](https://github.com/SanaeBelfrouh/Projet-Syst-mes-Distribu-s/assets/116807307/85545835-5ee6-4f1c-8e71-c1c355b79695)
+
+## 8. Développer votre application Frontend avec Angular ou React
+
+[demoangu.webm](https://github.com/SanaeBelfrouh/Projet-Syst-mes-Distribu-s/assets/116807307/e73b9f6b-596d-4373-980a-6c5847531a70)
+
