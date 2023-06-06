@@ -119,6 +119,9 @@ Le micro-service Radar gère les radars et génère de nouvelles infractions lor
 
 [radars-web.webm](https://github.com/SanaeBelfrouh/Contr-le-et-Projet-Programmation-Distribu-e/assets/116807307/39f83253-d2e2-43d0-8f06-1fdfec96e3a5)
 
+## 6. Application de simulation de radar
+Une application Java a été développée pour simuler un radar et générer aléatoirement des dépassements de vitesses. Les dépassements de vitesses sont envoyés via gRPC au micro-service Radar-Service.
+
 ## 7. Mettre en place les services techniques de l’architecture micro-service (Gateway,
 Eureka Discovery service)
 ![eureka](https://github.com/SanaeBelfrouh/Projet-Syst-mes-Distribu-s/assets/116807307/85545835-5ee6-4f1c-8e71-c1c355b79695)
