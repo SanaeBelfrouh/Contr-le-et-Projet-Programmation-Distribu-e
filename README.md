@@ -131,6 +131,37 @@ Eureka Discovery service)
 
 
 ## 9. Sécuriser votre système avec un système de d’authentification OAuth2 comme Keycloak
+Pour lancer le serveur Keycloak, vous pouvez suivre ces étapes :
+
+1. Téléchargez la dernière version de Keycloak depuis le site officiel : https://www.keycloak.org/downloads.html
+
+2. Extrayez le contenu de l'archive téléchargée.
+
+3. Ouvrez une invite de commandes ou un terminal et accédez au répertoire d'installation de Keycloak.
+
+4. Allez dans le répertoire "bin" :
+
+   - Sur Windows : exécutez `standalone.bat` en tapant la commande suivante :
+     ```
+     standalone.bat
+     ```
+
+   - Sur Linux/Mac : exécutez `standalone.sh` en tapant la commande suivante :
+     ```
+     ./standalone.sh
+     ```
+
+5. Attendez que Keycloak démarre. Vous verrez des messages dans la console indiquant que le serveur est en cours d'exécution.
+
+6. Par défaut, Keycloak utilise l'URL `http://localhost:8080` pour accéder à l'interface d'administration. Ouvrez votre navigateur et accédez à cette URL.
+
+7. Sur la page d'accueil de Keycloak, vous devez créer un compte administrateur en fournissant un nom d'utilisateur, un mot de passe, et en sélectionnant le realm (domaine) "master".
+
+8. Une fois connecté en tant qu'administrateur, vous pouvez créer des realms, des clients, des utilisateurs, etc., selon vos besoins.
+
+Il est important de noter que les étapes ci-dessus sont basées sur la configuration par défaut de Keycloak. Si vous avez apporté des modifications à la configuration, veuillez les prendre en compte lors du lancement du serveur Keycloak.
+
+N'oubliez pas de consulter la documentation officielle de Keycloak pour obtenir des informations détaillées sur la configuration et l'utilisation du serveur : https://www.keycloak.org/documentation.html
 ![keykloacksever](https://github.com/SanaeBelfrouh/Contr-le-et-Projet-Programmation-Distribu-e/assets/116807307/36fcdf26-e9db-42e1-a2c9-eb2a62bae353)
 
 [demokey.webm](https://github.com/SanaeBelfrouh/Contr-le-et-Projet-Programmation-Distribu-e/assets/116807307/5bcec818-edcc-42d6-9011-094eb8baa069)
