@@ -159,9 +159,7 @@ Pour lancer le serveur Keycloak, vous pouvez suivre ces étapes :
 
 8. Une fois connecté en tant qu'administrateur, vous pouvez créer des realms, des clients, des utilisateurs, etc., selon vos besoins.
 
-Il est important de noter que les étapes ci-dessus sont basées sur la configuration par défaut de Keycloak. Si vous avez apporté des modifications à la configuration, veuillez les prendre en compte lors du lancement du serveur Keycloak.
 
-N'oubliez pas de consulter la documentation officielle de Keycloak pour obtenir des informations détaillées sur la configuration et l'utilisation du serveur : https://www.keycloak.org/documentation.html
 ![keykloacksever](https://github.com/SanaeBelfrouh/Contr-le-et-Projet-Programmation-Distribu-e/assets/116807307/36fcdf26-e9db-42e1-a2c9-eb2a62bae353)
 
 [demokey.webm](https://github.com/SanaeBelfrouh/Contr-le-et-Projet-Programmation-Distribu-e/assets/116807307/5bcec818-edcc-42d6-9011-094eb8baa069)
