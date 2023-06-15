@@ -258,15 +258,12 @@ Pour lancer le serveur Keycloak, vous pouvez suivre ces étapes :
 
 4. Allez dans le répertoire "bin" :
 
-   - Sur Windows : exécutez `standalone.bat` en tapant la commande suivante :
+   - Sur Windows : exécutez `kc.bat` en tapant la commande suivante :
      ```
-     standalone.bat
-     ```
+ kc.bat start-dev
+ ```
 
-   - Sur Linux/Mac : exécutez `standalone.sh` en tapant la commande suivante :
-     ```
-     ./standalone.sh
-     ```
+  
 
 5. Attendez que Keycloak démarre. Vous verrez des messages dans la console indiquant que le serveur est en cours d'exécution.
 
