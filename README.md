@@ -53,7 +53,52 @@ Le micro-service Immatriculation expose les fonctionnalités suivantes via diff�
 - GraphQL : Utilisez les requêtes et mutations GraphQL pour interroger et modifier les données des propriétaires et des véhicules.
 - SOAP : Accédez aux services SOAP pour interagir avec les propriétaires et les véhicules via des opérations SOAP.
 - gRPC : Utilisez les services gRPC pour communiquer avec les propriétaires et les véhicules via RPC (Remote Procedure Call).
-
+  <pre>
+├───.idea
+├───.mvn
+│   └───wrapper
+├───src
+│   ├───main
+│   │   ├───java
+│   │   │   └───org
+│   │   │       └───sid
+│   │   │           └───immatriculation
+│   │   │               ├───dto
+│   │   │               ├───entities
+│   │   │               ├───repositories
+│   │   │               └───web
+│   │   │                   ├───graphql
+│   │   │                   ├───grpc
+│   │   │                   │   └───stubs
+│   │   │                   ├───rest
+│   │   │                   └───soap
+│   │   └───resources
+│   │       ├───graphql
+│   │       └───protos
+│   └───test
+│       └───java
+│           └───org
+│               └───sid
+│                   └───immatriculation
+└───target
+    ├───classes
+    │   ├───graphql
+    │   ├───org
+    │   │   └───sid
+    │   │       └───immatriculation
+    │   │           ├───dto
+    │   │           ├───entities
+    │   │           ├───repositories
+    │   │           └───web
+    │   │               ├───graphql
+    │   │               ├───grpc
+    │   │               │   └───stubs
+    │   │               ├───rest
+    │   │               └───soap
+    │   └───protos
+    └───generated-sources
+        └───annotations
+</pre>
 ### c. Tester les 4 web services
 ### REST
 
@@ -99,7 +144,35 @@ Le micro-service Immatriculation expose les fonctionnalités suivantes via diff�
 ## 4. Micro-service Infractions
 
 Le micro-service Infractions gère les infractions liées aux dépassements de vitesses. Il permet de créer de nouvelles infractions et de récupérer les infractions existantes.
-
+<pre>├───.idea
+├───.mvn
+│   └───wrapper
+├───src
+│   ├───main
+│   │   ├───java
+│   │   │   └───org
+│   │   │       └───sid
+│   │   │           └───infraction
+│   │   │               ├───entities
+│   │   │               ├───repositories
+│   │   │               └───web
+│   │   └───resources
+│   └───test
+│       └───java
+│           └───org
+│               └───sid
+│                   └───infraction
+└───target
+    ├───classes
+    │   └───org
+    │       └───sid
+    │           └───infraction
+    │               ├───entities
+    │               ├───repositories
+    │               └───web
+    └───generated-sources
+        └───annotations
+</pre>
 ![infraction](https://github.com/SanaeBelfrouh/Projet-Syst-mes-Distribu-s/assets/116807307/ce6c4043-ec36-4ff6-bf5f-8a0b4a3ffa07)
 
 [infraction-r.webm](https://github.com/SanaeBelfrouh/Contr-le-et-Projet-Programmation-Distribu-e/assets/116807307/5d8a278b-028a-4896-807f-af077096bd8d)
@@ -112,7 +185,51 @@ Le micro-service Infractions gère les infractions liées aux dépassements de v
 ## 5. Micro-service Radar
 
 Le micro-service Radar gère les radars et génère de nouvelles infractions lorsqu'un dépassement de vitesse est détecté. Ce service communique avec le micro-service Immatriculation pour obtenir les informations sur le propriétaire du véhicule et fait appel au micro-service Infractions pour générer une nouvelle infraction. La communication entre les services peut se faire via REST, SOAP, gRPC ou GraphQL.
-
+<pre>├───.idea
+├───.mvn
+│   └───wrapper
+├───src
+│   ├───main
+│   │   ├───java
+│   │   │   └───org
+│   │   │       └───sid
+│   │   │           └───radarservice
+│   │   │               ├───entities
+│   │   │               ├───feign
+│   │   │               ├───model
+│   │   │               ├───repositories
+│   │   │               └───web
+│   │   │                   └───grpc
+│   │   │                       └───stubs
+│   │   └───resources
+│   │       └───protos
+│   └───test
+│       └───java
+│           └───org
+│               └───sid
+│                   └───radarservice
+└───target
+    ├───classes
+    │   ├───org
+    │   │   └───sid
+    │   │       └───radarservice
+    │   │           ├───entities
+    │   │           ├───feign
+    │   │           ├───model
+    │   │           ├───repositories
+    │   │           └───web
+    │   │               └───grpc
+    │   │                   └───stubs
+    │   └───protos
+    ├───generated-sources
+    │   └───annotations
+    ├───generated-test-sources
+    │   └───test-annotations
+    └───test-classes
+        └───org
+            └───sid
+                └───radarservice
+</pre>
 ![radardb](https://github.com/SanaeBelfrouh/Projet-Syst-mes-Distribu-s/assets/116807307/e937102a-2b2f-482c-875d-8e1cc28786cc)
 
 ![radar-h2](https://github.com/SanaeBelfrouh/Projet-Syst-mes-Distribu-s/assets/116807307/2e75cae4-757d-4cfc-a5fa-7155de8e20ac)
