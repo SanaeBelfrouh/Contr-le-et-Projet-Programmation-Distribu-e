@@ -54,50 +54,68 @@ Le micro-service Immatriculation expose les fonctionnalités suivantes via diff�
 - SOAP : Accédez aux services SOAP pour interagir avec les propriétaires et les véhicules via des opérations SOAP.
 - gRPC : Utilisez les services gRPC pour communiquer avec les propriétaires et les véhicules via RPC (Remote Procedure Call).
   <pre>
-├───.idea
-├───.mvn
-│   └───wrapper
-├───src
-│   ├───main
-│   │   ├───java
-│   │   │   └───org
-│   │   │       └───sid
-│   │   │           └───immatriculation
-│   │   │               ├───dto
-│   │   │               ├───entities
-│   │   │               ├───repositories
-│   │   │               └───web
-│   │   │                   ├───graphql
-│   │   │                   ├───grpc
-│   │   │                   │   └───stubs
-│   │   │                   ├───rest
-│   │   │                   └───soap
-│   │   └───resources
-│   │       ├───graphql
-│   │       └───protos
-│   └───test
-│       └───java
-│           └───org
-│               └───sid
-│                   └───immatriculation
-└───target
-    ├───classes
-    │   ├───graphql
-    │   ├───org
-    │   │   └───sid
-    │   │       └───immatriculation
-    │   │           ├───dto
-    │   │           ├───entities
-    │   │           ├───repositories
-    │   │           └───web
-    │   │               ├───graphql
-    │   │               ├───grpc
-    │   │               │   └───stubs
-    │   │               ├───rest
-    │   │               └───soap
-    │   └───protos
-    └───generated-sources
-        └───annotations
+   
+├───main
+│   ├───java
+│   │   └───org
+│   │       └───sid
+│   │           └───immatriculation
+│   │               │   RegistrationServiceApplication.java
+│   │               │   
+│   │               ├───dto
+│   │               │       OwnerRequest.java
+│   │               │       VehicleRequest.java
+│   │               │       
+│   │               ├───entities
+│   │               │       Owner.java
+│   │               │       Vehicle.java
+│   │               │       
+│   │               ├───repositories
+│   │               │       OwnerRepository.java
+│   │               │       VehicleRepository.java
+│   │               │       
+│   │               └───web
+│   │                   ├───graphql
+│   │                   │       GraphQLOwnerController.java
+│   │                   │       GrapphQLVehicle.java
+│   │                   │       
+│   │                   ├───grpc
+│   │                   │   │   GrpcServerConfig.java
+│   │                   │   │   OwnerGrpcService.java
+│   │                   │   │   
+│   │                   │   └───stubs
+│   │                   │           Owner.java
+│   │                   │           OwnerOuterClass.java
+│   │                   │           OwnerServiceGrpc.java
+│   │                   │           
+│   │                   ├───rest
+│   │                   │       RestOwnerController.java
+│   │                   │       RestVehicleController.java
+│   │                   │       
+│   │                   └───soap
+│   │                           CXFSoapWebServiceConfig.java
+│   │                           OwnerSoapController.java
+│   │                           OwnerSoapService.java
+│   │                           
+│   └───resources
+│       │   application.properties
+│       │   
+│       ├───graphql
+│       │       schema.graphqls
+│       │       
+│       └───protos
+│               owner.proto
+│               registration.proto
+│               
+└───test
+    └───java
+        └───org
+            └───sid
+                └───immatriculation
+                        RegistrationServiceApplicationTests.java
+                        
+
+
 </pre>
 ### c. Tester les 4 web services
 ### REST
