@@ -53,9 +53,8 @@ Le micro-service Immatriculation expose les fonctionnalités suivantes via diff�
 - GraphQL : Utilisez les requêtes et mutations GraphQL pour interroger et modifier les données des propriétaires et des véhicules.
 - SOAP : Accédez aux services SOAP pour interagir avec les propriétaires et les véhicules via des opérations SOAP.
 - gRPC : Utilisez les services gRPC pour communiquer avec les propriétaires et les véhicules via RPC (Remote Procedure Call).
-  <pre>
-   
-├───main
+ <pre>
+    ├───main
 │   ├───java
 │   │   └───org
 │   │       └───sid
@@ -114,9 +113,10 @@ Le micro-service Immatriculation expose les fonctionnalités suivantes via diff�
                 └───immatriculation
                         RegistrationServiceApplicationTests.java
                         
+ 
+ </pre>
 
 
-</pre>
 ### c. Tester les 4 web services
 ### REST
 
