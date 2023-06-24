@@ -162,34 +162,34 @@ Le micro-service Immatriculation expose les fonctionnalités suivantes via diff�
 ## 4. Micro-service Infractions
 
 Le micro-service Infractions gère les infractions liées aux dépassements de vitesses. Il permet de créer de nouvelles infractions et de récupérer les infractions existantes.
-<pre>├───.idea
-├───.mvn
-│   └───wrapper
-├───src
-│   ├───main
-│   │   ├───java
-│   │   │   └───org
-│   │   │       └───sid
-│   │   │           └───infraction
-│   │   │               ├───entities
-│   │   │               ├───repositories
-│   │   │               └───web
-│   │   └───resources
-│   └───test
-│       └───java
-│           └───org
-│               └───sid
-│                   └───infraction
-└───target
-    ├───classes
-    │   └───org
-    │       └───sid
-    │           └───infraction
-    │               ├───entities
-    │               ├───repositories
-    │               └───web
-    └───generated-sources
-        └───annotations
+<pre>   
+├───main
+│   ├───java
+│   │   └───org
+│   │       └───sid
+│   │           └───immatriculation
+│   │               │   InfractionServiceApplication.java
+│   │               │   
+│   │               ├───entities
+│   │               │       Infraction.java
+│   │               │       
+│   │               ├───repositories
+│   │               │       InfractionRepository.java
+│   │               │       
+│   │               └───web
+│   │                       InfractionRestController.java
+│   │                       
+│   └───resources
+│           application.properties
+│           
+└───test
+    └───java
+        └───org
+            └───sid
+                └───immatriculation
+                        InfractionServiceApplicationTests.java
+                        
+
 </pre>
 ![infraction](https://github.com/SanaeBelfrouh/Projet-Syst-mes-Distribu-s/assets/116807307/ce6c4043-ec36-4ff6-bf5f-8a0b4a3ffa07)
 
@@ -203,50 +203,55 @@ Le micro-service Infractions gère les infractions liées aux dépassements de v
 ## 5. Micro-service Radar
 
 Le micro-service Radar gère les radars et génère de nouvelles infractions lorsqu'un dépassement de vitesse est détecté. Ce service communique avec le micro-service Immatriculation pour obtenir les informations sur le propriétaire du véhicule et fait appel au micro-service Infractions pour générer une nouvelle infraction. La communication entre les services peut se faire via REST, SOAP, gRPC ou GraphQL.
-<pre>├───.idea
-├───.mvn
-│   └───wrapper
-├───src
-│   ├───main
-│   │   ├───java
-│   │   │   └───org
-│   │   │       └───sid
-│   │   │           └───radarservice
-│   │   │               ├───entities
-│   │   │               ├───feign
-│   │   │               ├───model
-│   │   │               ├───repositories
-│   │   │               └───web
-│   │   │                   └───grpc
-│   │   │                       └───stubs
-│   │   └───resources
-│   │       └───protos
-│   └───test
-│       └───java
-│           └───org
-│               └───sid
-│                   └───radarservice
-└───target
-    ├───classes
-    │   ├───org
-    │   │   └───sid
-    │   │       └───radarservice
-    │   │           ├───entities
-    │   │           ├───feign
-    │   │           ├───model
-    │   │           ├───repositories
-    │   │           └───web
-    │   │               └───grpc
-    │   │                   └───stubs
-    │   └───protos
-    ├───generated-sources
-    │   └───annotations
-    ├───generated-test-sources
-    │   └───test-annotations
-    └───test-classes
+<pre>
+     
+├───main
+│   ├───java
+│   │   └───org
+│   │       └───sid
+│   │           └───radarservice
+│   │               │   RadarServiceApplication.java
+│   │               │   
+│   │               ├───entities
+│   │               │       Radar.java
+│   │               │       
+│   │               ├───feign
+│   │               │       InfractionFeignClient.java
+│   │               │       RegistrationFeignClient.java
+│   │               │       
+│   │               ├───model
+│   │               │       Infraction.java
+│   │               │       Owner.java
+│   │               │       Vehicle.java
+│   │               │       
+│   │               ├───repositories
+│   │               │       RadarRepository.java
+│   │               │       
+│   │               └───web
+│   │                   │   RadarRestController.java
+│   │                   │   
+│   │                   └───grpc
+│   │                       │   GrpcServerConfig.java
+│   │                       │   RadarGrpcService.java
+│   │                       │   
+│   │                       └───stubs
+│   │                               RadarOuterClass.java
+│   │                               RadarServiceGrpc.java
+│   │                               
+│   └───resources
+│       │   application.properties
+│       │   
+│       └───protos
+│               radar.proto
+│               
+└───test
+    └───java
         └───org
             └───sid
                 └───radarservice
+                        RadarServiceApplicationTests.java
+                        
+
 </pre>
 ![radardb](https://github.com/SanaeBelfrouh/Projet-Syst-mes-Distribu-s/assets/116807307/e937102a-2b2f-482c-875d-8e1cc28786cc)
 
@@ -277,9 +282,10 @@ Pour lancer le serveur Keycloak, vous pouvez suivre ces étapes :
 4. Allez dans le répertoire "bin" :
 
    - Sur Windows : exécutez `kc.bat` en tapant la commande suivante :
-     ```
+   
+```
  kc.bat start-dev
- ```
+ 
 
   
 
